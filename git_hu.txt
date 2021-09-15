@@ -17,6 +17,7 @@
 	git commit -m 'message' : commit하고 commit에 대한 간단한 메시지 작성 (vi 에디터 없이 작성하기)
 	git commit -am 'message'  : git add와 git commit을 동시에
 	git log : commit 내역 확인
+<<<<<<< HEAD
 	git log --online : 로그 한줄 확인
 
 5. 파일 되돌리기
@@ -45,3 +46,6 @@ git revert <commit> : 지정한 commit으로 인해 발생한 변경을 되돌�
 
 
 
+=======
+			dd
+>>>>>>> 01637de799c9022728e077d5d3413e87a8eae991
