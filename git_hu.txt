@@ -15,5 +15,33 @@
 	git add 파일명 : 파일을 staging area에 추가
 	git commit : commit 메세지를 남기기 위해 vi 에디터 실행
 	git commit -m 'message' : commit하고 commit에 대한 간단한 메시지 작성 (vi 에디터 없이 작성하기)
+	git commit -am 'message'  : git add와 git commit을 동시에
 	git log : commit 내역 확인
-			
+	git log --online : 로그 한줄 확인
+
+5. 파일 되돌리기
+	git restore 파일명  
+	git reset --hard log키
+	git reflog    : 삭제한 커밋의 아이디를 확인 할 수 있음
+	git reset : 삭제한 커밋 아이디
+
+
+1)git log 또는 git reflog를 통해 commit id 확인
+git reset --soft   : commit내역을 되돌리고, commit만 취소 (staging area에는 아직 있는 상태 add까지만 진행된 상태)
+git reset --mixed : commit내역을 되돌리고 staging까지 취소  
+----------------------------파일 영향 x---------------------------------------
+git reset --hard  : commit내역을 되돌리고 파일을 rollback 함 
+git revert <commit> : 지정한 commit으로 인해 발생한 변경을 되돌리고, 새로운 커밋을 생성해 커밋 내역에 추가
+
+
+6. 원격 리포지토리 추가및 push/pull
+	git remote add origin <remote repository 주소>
+	git pull --allow-unrelated-histories origin main  :처음으로 깃에서 파일들 가져오기
+		* 원격 리포지토리에서 처음 pull 할 때만 --allow옵션 사용 하면 됨
+	git push -u origin main 
+		* u : push 할 기본 원격 저장소와 브랜치를 기억, 앞으로는 git push만 해도 원격 저장소와 브랜치 잡아줌
+	
+
+
+
+
