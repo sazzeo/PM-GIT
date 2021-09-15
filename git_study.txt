@@ -9,11 +9,3 @@
 	git checkout -b main : main브랜치를 생성하고 해당 브랜치로 이동
 	git branch -M main : 기본 브랜치를 main브랜치로 지정
 	git status : 상태 확인
-
-
-4. 파일을 생성하고 add, commit 진행 
-	git add 파일명 : 파일을 staging area에 추가
-	git commit : commit 메세지를 남기기 위해 vi 에디터 실행
-	git commit -m 'message' : commit하고 commit에 대한 간단한 메시지 작성 (vi 에디터 없이 작성하기)
-	git log : commit 내역 확인
-			
